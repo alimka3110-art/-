@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+.main-layout { min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f0f4ff 100%); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.main-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 24px 0; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4), 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { margin: 0; font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; background: linear-gradient(90deg, #fff, #e0e7ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+nav { display: flex; gap: 12px; align-items: center; }
+.nav-link { color: #fff; text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 10px; transition: all .2s cubic-bezier(0.4,0,0.2,1); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
+.nav-link:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); border-color: rgba(255,255,255,0.3); }
+.nav-add { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; font-weight: 700; border: none; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+.nav-add:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6); }
+.main-content { flex: 1; padding: 40px 0 32px 0; }
+.main-footer { text-align: center; color: #fff; font-size: 0.95rem; padding: 20px 0 12px 0; font-weight: 500; }

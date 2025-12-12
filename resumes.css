@@ -1,0 +1,266 @@
+/* Resumes Page Styles */
+
+.resumes-page {
+  padding: 2rem 0;
+  min-height: 60vh;
+}
+
+.resumes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.resumes-container h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.resumes-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  min-height: 600px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Левая панель - список сотрудников */
+.resumes-sidebar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+  color: white;
+  overflow-y: auto;
+}
+
+.resumes-sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resumes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resume-list-item {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.resume-list-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(5px);
+}
+
+.resumes-list li.active .resume-list-item {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-name {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.resume-position {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Правая панель - содержимое резюме */
+.resumes-content {
+  padding: 2rem;
+  background: white;
+  overflow-y: auto;
+}
+
+.resume-card {
+  background: white;
+  border-radius: 12px;
+}
+
+.resume-header {
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resume-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.resume-position-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.resume-body {
+  margin-bottom: 2rem;
+}
+
+.resume-text {
+  line-height: 1.8;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.resume-text p {
+  margin: 0.8rem 0;
+}
+
+.resume-text p:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.resume-text p:nth-child(2),
+.resume-text p:nth-child(3) {
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Действия */
+.resume-actions {
+  border-top: 1px solid #ecf0f1;
+  padding-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-print:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-print:active {
+  transform: translateY(0);
+}
+
+.no-resume {
+  text-align: center;
+  color: #95a5a6;
+  padding: 3rem 0;
+  font-size: 1.1rem;
+}
+
+.no-employees {
+  text-align: center;
+  padding: 3rem 0;
+  background: #f5f7fa;
+  border-radius: 12px;
+  color: #7f8c8d;
+}
+
+.no-employees p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .resumes-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .resumes-sidebar {
+    padding: 1rem;
+  }
+
+  .resumes-sidebar h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .resume-list-item {
+    padding: 0.8rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .resumes-content {
+    padding: 1.5rem;
+  }
+
+  .resume-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .resume-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Стили для печати */
+@media print {
+  .resumes-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resumes-sidebar {
+    display: none;
+  }
+
+  .resumes-content {
+    padding: 0;
+    background: white;
+  }
+
+  .resume-card {
+    box-shadow: none;
+    border: none;
+  }
+
+  .resume-actions {
+    display: none;
+  }
+
+  .resume-text {
+    color: black;
+  }
+
+  .resume-position-badge {
+    background: #667eea;
+  }
+}
